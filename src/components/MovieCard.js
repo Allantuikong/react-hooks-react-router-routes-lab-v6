@@ -1,12 +1,16 @@
-import {Link} from 'react-router-dom';
+// src/components/MovieCard.js
 
-function MovieCard({title}) {
-  
+// display individual movie information and link to the detailed movie page. 
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const MovieCard = ({ movie }) => {
   return (
-    <article>
-        <h2>{title}</h2>
-        {/* What should go here? */}
-    </article>
+    <div>
+      <h2>{movie.title}</h2>
+      <Link to={`/movie/${movie.id}`}>View Details</Link>
+    </div>
   );
 };
 

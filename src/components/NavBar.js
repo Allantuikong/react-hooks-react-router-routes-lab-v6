@@ -1,12 +1,18 @@
-import { NavLink } from "react-router-dom";
-import "./NavBar.css";
+// src/components/NavBar.js
 
-function NavBar() {
+// Include navigation links to the different routes.
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './NavBar.css';
+
+const NavBar = () => {
   return (
-    <nav className="navbar">
-    
+    <nav>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/directors">Directors</NavLink>
+      <NavLink to="/actors">Actors</NavLink>
     </nav>
-    );
+  );
 };
 
 export default NavBar;
